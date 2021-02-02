@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  app:
+    labels: 
+      - app.pokedex
+    hostname: app
+    container_name: pokedex
+    volumes: 
+      - ./:/var/www/html
+    build:
+      context: containers/app/
+      dockerfile: Dockerfile.dev
+      args:
+        - TIMEZONE=America/Sao_Paulo
+    image: heitor92/pokedex:latest
+    ports:
+      - "80:80"
+    
