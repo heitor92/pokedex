@@ -13,4 +13,4 @@
 |
 */
 
-$router->get('/', 'PokedexController@index');
+$router->get('/', 'Pokedex\PokedexController@index');

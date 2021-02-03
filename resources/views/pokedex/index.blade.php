@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokédex</title>
-</head>
-
-<body>
-    <h1>Pokédex</h1>
-</body>
-
-</html>
+<x-pokedex.layout>
+    <x-slot name="title">
+        Pokédex
+    </x-slot>
+    @include('pokedex.content')
+</x-pokedex.layout>
