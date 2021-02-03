@@ -1,5 +1,5 @@
-<div class="container">
-<section class="grid-10">
+<div class="container-flex">
+<section class="section-pokemons-list">
     <div id="list-pokemon">
         <span>
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="">
@@ -68,17 +68,15 @@
         <button id="proximo">Próximo</button>
     </div>
 </section>
-<section class="grid-6" id="card-pokemon">
+<section class="section-card-pokemon">
     <div id="card">
         <div id="card-image">
             <img src="assets/1.png" alt="">
         </div>
         
         <div id="card-description">
-            <div id="card-description-sencodary">
-                <p>No. 01</p>
-            </div>
-            <p>Bulbasaur</p>
+            <p class="description-primary">No. 01</p>
+            <p class="description-secondary">Bulbasaur</p>
         </div>
     </div>
 </section>
