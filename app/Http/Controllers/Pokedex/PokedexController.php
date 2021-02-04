@@ -28,4 +28,16 @@ class PokedexController extends Controller
         $pokemons = $pokedex->getPokemons();
         return view('pokedex.index', ['pokemons' => $pokemons]);
     }
+
+    /**
+     * Detalhar sobre pokémon
+     * 
+     * @return \Illuminate\View\View
+     */
+    public function detalhar($id)
+    {
+        $pokedex = new Pokedex('pokemon', $id);
+        $pokemon = $pokedex->getPokemon();
+        return view('pokedex.detalhar', ['pokemon' => $pokemon]);
+    }
 }
