@@ -7,7 +7,7 @@
 [![JQuery](https://img.shields.io/badge/-JQuery-0769AD?style=flat&logo=jquery&logoColor=white&link=https://github.com/heitor92)](https://github.com/heitor92)
 [![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white&link=https://github.com/heitor92)](https://github.com/heitor92)
 
-Esse projeto lista todos os pokémons do pokédex mundial e exibe uma página de detalhes sobre cada pokémon. Isso funciona graças ao [PokeApi](https://pokeapi.co/)]
+Esse projeto lista todos os pokémons do pokédex mundial e exibe uma página de detalhes sobre cada pokémon. Isso funciona graças ao [PokeApi](https://pokeapi.co/)
 
 
 ## Como instalar
