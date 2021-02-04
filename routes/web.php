@@ -14,3 +14,4 @@
 */
 
 $router->get('/', 'Pokedex\PokedexController@index');
+$router->get('detalhar/{id}',  'Pokedex\PokedexController@detalhar');

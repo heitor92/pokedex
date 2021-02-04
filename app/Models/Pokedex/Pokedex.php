@@ -29,12 +29,9 @@ class Pokedex extends Model
     private $resource;
 
 
-    public function __construct(
-        string $baseURL = 'https://pokeapi.co/api/v2',
-        string $endPoint = 'pokedex',
-        string $resource = '1'
-    ) {
-        $this->baseURL = $baseURL;
+    public function __construct(string $endPoint = 'pokedex', string $resource = '1')
+    {
+        $this->baseURL = 'https://pokeapi.co/api/v2';
         $this->endPoint = $endPoint;
         $this->resource = $resource;
     }
@@ -57,7 +54,7 @@ class Pokedex extends Model
      */
     private function getURL()
     {
-        return "{$this->baseURL}/{$this->endPoint}/{$this->resource}"; 
+        return "{$this->baseURL}/{$this->endPoint}/{$this->resource}";
     }
 
     /**
@@ -71,12 +68,36 @@ class Pokedex extends Model
         $arrayPokemons = $this->fetch()['pokemon_entries'];
         $pokemons = [];
         $pokemon = [];
-        foreach($arrayPokemons as $arPokemon) {
+        foreach ($arrayPokemons as $arPokemon) {
             $pokemon['id_pokemon'] = $arPokemon['entry_number'];
             $pokemon['name'] = $arPokemon['pokemon_species']['name'];
             $pokemon['img_front'] = $imageFront . $pokemon['id_pokemon'] . '.png';
             $pokemons[] = $pokemon;
         }
         return $pokemons;
+    }
+
+    /**
+     * Retorna um pokemon
+     * 
+     * @return array
+     */
+    public function getPokemon()
+    {
+        $arrayPokemon = $this->fetch();
+        $pokemon = [];
+
+        $pokemon['id'] = $arrayPokemon['id'];
+        $pokemon['abilities'] = $arrayPokemon['abilities'];
+        $pokemon['base_experience'] = $arrayPokemon['base_experience'];
+        $pokemon['height'] = $arrayPokemon['height'];
+        $pokemon['weight'] = $arrayPokemon['weight'];
+        $pokemon['moves'] = $arrayPokemon['moves'];
+        $pokemon['name'] = $arrayPokemon['name'];
+        $pokemon['stats'] = $arrayPokemon['stats'];
+        $pokemon['types'] = $arrayPokemon['types'];
+        $pokemon['image'] = $arrayPokemon['sprites']['other']['official-artwork']['front_default'];
+
+        return $pokemon;
     }
 }

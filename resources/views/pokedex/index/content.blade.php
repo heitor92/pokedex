@@ -9,15 +9,17 @@
         </div>
         <div id="pagination">
             <button id="anterior">Anterior</button>
-            <input type="text" value="1" id="position" readonly>
+            <input type="number" value="1" id="position" min="1" max="5">
             <button id="proximo">Próximo</button>
         </div>
     </section>
     <section class="section-card-pokemon">
         <div id="card">
-            <div id="card-image">
+            <a href="/detalhar/1">
+                <div id="card-image">
                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="bulbasaur">
-            </div>
+                </div>
+            </a>
 
             <div id="card-description">
                 <p class="description-primary">No. 1</p>
@@ -34,7 +36,7 @@ $(document).ready(function(){
     let initialPage = 1
     let numPages = Math.ceil(total/itensShow);
     let currentPage = 1;
-
+    $("#pagination #position").attr('max', numPages);
     $('#list-pokemon span').hide();
     $('#list-pokemon span').slice(0, itensShow).show();
     $('#pagination #position').val(initialPage);
@@ -83,8 +85,34 @@ $(document).ready(function(){
         let namePokemon = $(this).data("name");
         $("#card #card-image img").attr('src',`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${idPokemon}.png`);
         $("#card #card-image img").attr('alt', namePokemon);
+        $("#card a").attr('href', `/detalhar/${idPokemon}`);
         $('#card-description .description-primary').text(`No. ${idPokemon}`);
         $('#card-description .description-secondary').text(namePokemon);
+    });
+
+    $("#pagination #position").bind('keyup mouseup', function (){
+        let startItem;
+        let endItem;
+        currentPage = $('#pagination #position').val();
+        startItem = (currentPage - 1) * itensShow;
+        endItem = (total - startItem) < itensShow ? (total - startItem) + startItem : startItem + itensShow;
+        
+        $('#list-pokemon span').hide();
+        $('#list-pokemon span').slice(startItem, endItem).show();
+        
+        if(currentPage == numPages){
+            $('#pagination #proximo').prop("disabled",true);
+        }
+        if(currentPage > initialPage){
+            $('#pagination #anterior').prop("disabled",false);
+        }
+
+        if(currentPage == initialPage){
+            $('#pagination #anterior').prop("disabled",true);
+        }
+        if(currentPage < numPages){
+            $('#pagination #proximo').prop("disabled",false);
+        }
     });
 });
 </script>

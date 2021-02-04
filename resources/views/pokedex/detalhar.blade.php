@@ -2,5 +2,7 @@
     <x-slot name="title">
         Pokédex
     </x-slot>
-    @include('pokedex.index.content')
+
+    @include('pokedex.detalhar.content')
+    
 </x-pokedex.layout>
