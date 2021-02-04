@@ -4,8 +4,6 @@ namespace App\Http\Controllers\Pokedex;
 
 use App\Http\Controllers\Controller;
 use App\Models\Pokedex\Pokedex;
-use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Http;
 
 class PokedexController extends Controller
 {
@@ -27,7 +25,7 @@ class PokedexController extends Controller
     public function index()
     {
         $pokedex = new Pokedex();
-        $pokedex->fetch();
-        return view('pokedex.index');
+        $pokemons = $pokedex->getPokemons();
+        return view('pokedex.index', ['pokemons' => $pokemons]);
     }
 }

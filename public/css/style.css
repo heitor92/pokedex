@@ -42,15 +42,15 @@ header #versao-top {
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     width: 80%;
     height: auto;
 }
 
 @media(max-width: 940px){
     .container-flex{
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-top: 50px;
         margin-bottom: 50px;
     }
@@ -124,7 +124,13 @@ header #versao-top {
 #card {
     width: 340px;
     text-align: center;
-    margin-left: 15px;
+    margin-left: 25px;
+}
+
+@media(max-width: 940px){
+    #card {
+        margin-left: 0;
+    }
 }
 
 #card #card-image {
