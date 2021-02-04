@@ -1,0 +1,6 @@
+ports:
+  - port: 8001
+    onOpen: open-preview
+tasks:
+  - before: 'apachectl start'
+    command: 'echo "Status: projeto pronto para uso"'
