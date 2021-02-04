@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <img id="logo" src="{{ URL::asset('/assets/logo.svg') }}" alt="">
+        <a href="/"><img id="logo" src="{{ URL::asset('/assets/logo.svg') }}" alt=""></a>
         <span id="versao-top">Ver. 1.0</span>
     </header>
     <main>
