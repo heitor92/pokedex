@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/heitor92/pokedex)
+
 # Pokédex
 
 [![JavaScript](https://img.shields.io/badge/-JavaScript-black?style=flat&logo=javascript&link=https://github.com/heitor92)](https://github.com/heitor92) 
@@ -13,6 +15,10 @@ Esse projeto lista todos os pokémons do pokédex mundial e exibe uma página de
 ## Como instalar
 
 ## Como usar
+
+O projeto pode ser executado no gitpod:
+
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/heitor92/pokedex)
 
 ## Contributing
 
