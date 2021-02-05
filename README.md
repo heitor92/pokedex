@@ -9,10 +9,15 @@
 [![JQuery](https://img.shields.io/badge/-JQuery-0769AD?style=flat&logo=jquery&logoColor=white&link=https://github.com/heitor92)](https://github.com/heitor92)
 [![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white&link=https://github.com/heitor92)](https://github.com/heitor92)
 
-Esse projeto lista todos os pokémons do pokédex mundial e exibe uma página de detalhes sobre cada pokémon. Isso funciona graças ao [PokeApi](https://pokeapi.co/)
+Esse projeto lista todos os pokémons do pokédex mundial e exibe uma página de detalhes sobre cada pokémon. Isso funciona graças ao [PokeApi](https://pokeapi.co/).
+
+Esse projeto foi desenvolvido usando  micro-framework lumen.
 
 
-## Como instalar
+## Pré-requisito
+
+- PHP
+- Apache
 
 ## Como usar
 
@@ -20,7 +25,10 @@ O projeto pode ser executado no gitpod:
 
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/heitor92/pokedex)
 
-## Contributing
+Pode ser excutado em localhost no container na porta 80:
+```
+docker-compose up
+```
 
 ## License
 
