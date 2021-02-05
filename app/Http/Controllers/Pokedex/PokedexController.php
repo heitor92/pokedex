@@ -32,6 +32,8 @@ class PokedexController extends Controller
     /**
      * Detalhar sobre pokémon
      * 
+     * 
+     * @param mixed $id
      * @return \Illuminate\View\View
      */
     public function detalhar($id)
