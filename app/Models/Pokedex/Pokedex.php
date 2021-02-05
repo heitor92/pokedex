@@ -28,6 +28,13 @@ class Pokedex extends Model
      */
     private $resource;
 
+     /**
+     * Create a new instance.
+     *
+     * @param string $endPoint
+     * @param string $resource
+     * @return void
+     */
 
     public function __construct(string $endPoint = 'pokedex', string $resource = '1')
     {
